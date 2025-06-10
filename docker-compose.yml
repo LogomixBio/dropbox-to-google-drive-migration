@@ -1,0 +1,20 @@
+services:
+  migration:
+    build: .
+    container_name: dropbox-to-google-drive-migration
+    environment:
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - DROPBOX_APP_KEY=${DROPBOX_APP_KEY}
+      - DROPBOX_APP_SECRET=${DROPBOX_APP_SECRET}
+    volumes:
+      - ./data:/data
+      - ./credentials:/credentials
+      - ./config.json:/app/config.json
+      - ./logs:/app/logs
+    networks:
+      - migration-network
+
+networks:
+  migration-network:
+    driver: bridge
