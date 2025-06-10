@@ -1,0 +1,23 @@
+# Core dependencies
+dropbox==11.36.2
+google-api-python-client==2.108.0
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-auth-httplib2==0.1.1
+
+# Additional utilities
+tqdm==4.66.1
+click==8.1.7
+python-dotenv==1.0.0
+httpx==0.25.2
+tenacity==8.2.3
+
+# Development dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Type stubs
+types-requests==2.31.0.10
