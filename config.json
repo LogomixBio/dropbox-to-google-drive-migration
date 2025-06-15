@@ -1,0 +1,22 @@
+{
+  "source": {
+    "root_folder": "/",
+    "exclude_patterns": [".DS_Store", "*.tmp", "~*", "Thumbs.db"]
+  },
+  "destination": {
+    "root_folder": "",
+    "create_backup": true,
+    "use_shared_drive": true,
+    "shared_drive_name": "01_Logomix_migration-test"
+  },
+  "test_folder": "/test",
+  "options": {
+    "preserve_timestamps": true,
+    "migrate_permissions": true,
+    "chunk_size_mb": 50,
+    "parallel_uploads": 3,
+    "max_retries": 3,
+    "retry_delay": 5,
+    "continue_on_error": true
+  }
+}
